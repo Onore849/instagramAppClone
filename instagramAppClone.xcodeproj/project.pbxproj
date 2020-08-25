@@ -10,7 +10,6 @@
 		7C3C3231694E8167A71C6802 /* Pods_instagramAppClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C53C1CD857FEDC1DD0F3065 /* Pods_instagramAppClone.framework */; };
 		F8C24DA924F4C39500F2B63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DA824F4C39500F2B63A /* AppDelegate.swift */; };
 		F8C24DAB24F4C39500F2B63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DAA24F4C39500F2B63A /* SceneDelegate.swift */; };
-		F8C24DAD24F4C39500F2B63A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DAC24F4C39500F2B63A /* HomeController.swift */; };
 		F8C24DB024F4C39500F2B63A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DAE24F4C39500F2B63A /* Main.storyboard */; };
 		F8C24DB224F4C39800F2B63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DB124F4C39800F2B63A /* Assets.xcassets */; };
 		F8C24DB524F4C39800F2B63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DB324F4C39800F2B63A /* LaunchScreen.storyboard */; };
@@ -29,6 +28,7 @@
 		F8C24DDE24F4D49D00F2B63A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DDD24F4D49D00F2B63A /* NotificationsViewController.swift */; };
 		F8C24DE024F4D4A800F2B63A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DDF24F4D4A800F2B63A /* ProfileViewController.swift */; };
 		F8C24DE224F4D6C800F2B63A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */; };
+		F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,6 @@
 		F8C24DA524F4C39500F2B63A /* instagramAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C24DA824F4C39500F2B63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8C24DAA24F4C39500F2B63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8C24DAC24F4C39500F2B63A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		F8C24DAF24F4C39500F2B63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C24DB124F4C39800F2B63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C24DB424F4C39800F2B63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		F8C24DDD24F4D49D00F2B63A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		F8C24DDF24F4D4A800F2B63A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 		F8C24DC224F4D3A800F2B63A /* CoreTabs */ = {
 			isa = PBXGroup;
 			children = (
-				F8C24DAC24F4C39500F2B63A /* HomeController.swift */,
+				F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */,
 				F8C24DD924F4D48600F2B63A /* ExploreViewController.swift */,
 				F8C24DDB24F4D49000F2B63A /* CameraViewController.swift */,
 				F8C24DDD24F4D49D00F2B63A /* NotificationsViewController.swift */,
@@ -327,9 +327,9 @@
 				F8C24DD624F4D45600F2B63A /* LoginViewController.swift in Sources */,
 				F8C24DC624F4D3E100F2B63A /* PostViewController.swift in Sources */,
 				F8C24DD224F4D43900F2B63A /* PostEditorViewController.swift in Sources */,
+				F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */,
 				F8C24DD024F4D42C00F2B63A /* SearchResultViewController.swift in Sources */,
 				F8C24DD824F4D46600F2B63A /* RegistrationViewController.swift in Sources */,
-				F8C24DAD24F4C39500F2B63A /* HomeController.swift in Sources */,
 				F8C24DCE24F4D41800F2B63A /* SearchViewController.swift in Sources */,
 				F8C24DE024F4D4A800F2B63A /* ProfileViewController.swift in Sources */,
 				F8C24DA924F4C39500F2B63A /* AppDelegate.swift in Sources */,
