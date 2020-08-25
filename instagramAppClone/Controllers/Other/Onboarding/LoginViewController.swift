@@ -108,7 +108,7 @@ class LoginViewController: UIViewController {
         
         passwordTextField.frame = CGRect(
             x: 25,
-            y: 162,
+            y: usernameEmailTextField.bottom + 10,
             width: view.frame.width - 50,
             height: 52)
         

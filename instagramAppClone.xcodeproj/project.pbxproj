@@ -29,6 +29,7 @@
 		F8C24DE024F4D4A800F2B63A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DDF24F4D4A800F2B63A /* ProfileViewController.swift */; };
 		F8C24DE224F4D6C800F2B63A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */; };
 		F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */; };
+		F8C24DE624F50C4200F2B63A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE524F50C4200F2B63A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F8C24DDF24F4D4A800F2B63A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F8C24DE524F50C4200F2B63A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				F8C24DA824F4C39500F2B63A /* AppDelegate.swift */,
 				F8C24DAA24F4C39500F2B63A /* SceneDelegate.swift */,
 				F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */,
+				F8C24DE524F50C4200F2B63A /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C24DD624F4D45600F2B63A /* LoginViewController.swift in Sources */,
+				F8C24DE624F50C4200F2B63A /* Extensions.swift in Sources */,
 				F8C24DC624F4D3E100F2B63A /* PostViewController.swift in Sources */,
 				F8C24DD224F4D43900F2B63A /* PostEditorViewController.swift in Sources */,
 				F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */,
