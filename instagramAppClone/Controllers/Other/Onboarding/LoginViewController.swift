@@ -15,10 +15,10 @@ class LoginViewController: UIViewController {
         // staticはインスタンス()を使わなくても呼び出すことができる
         static let cornerRadius: CGFloat = 8.0
         
-        static func textFieldSetting(placeholder: String) -> UITextField {
+        static func textFieldSetting(placeholder: String, returnKeyType: UIReturnKeyType) -> UITextField {
             
             let field = UITextField()
-             field.returnKeyType = .next
+             field.returnKeyType = returnKeyType
              
              field.placeholder = placeholder
              // textField内のinnnerのpadding-leftを操作
@@ -53,13 +53,13 @@ class LoginViewController: UIViewController {
     // create textField
     private let usernameEmailTextField: UITextField = {
         
-        Constants.textFieldSetting(placeholder: "Username or Email....")
+        Constants.textFieldSetting(placeholder: "Username or Email....", returnKeyType: .next)
         
     }()
     
     private let passwordTextField: UITextField = {
         
-        Constants.textFieldSetting(placeholder: "Password.....")
+        Constants.textFieldSetting(placeholder: "Password.....", returnKeyType: .continue)
         
     }()
     
