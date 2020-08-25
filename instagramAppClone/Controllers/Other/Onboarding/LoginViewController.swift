@@ -12,9 +12,12 @@ class LoginViewController: UIViewController {
     
     struct Constants {
         
-        // (): staticはインスタンスを使わなくても呼び出すことができる
+        // staticはインスタンス()を使わなくても呼び出すことができる
         static let cornerRadius: CGFloat = 8.0
+        
     }
+    
+ 
     
     // MARK:- Outletの作成
     
@@ -22,19 +25,22 @@ class LoginViewController: UIViewController {
     private let usernameEmailTextField: UITextField = {
         
         let field = UITextField()
-        
-        field.placeholder = "UserName or Email...."
         field.returnKeyType = .next
         
+        field.placeholder = "username or email...."
         // textField内のinnnerのpadding-leftを操作
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
         
-        
+        // タイプした最初の文字が大文字になるのを防ぐ
         field.autocapitalizationType = .none
+        
+        // textの自動補完機能をオフにする
         field.autocorrectionType = .no
         
+        // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
         field.layer.masksToBounds = true
+        
         field.layer.cornerRadius = Constants.cornerRadius
         field.layer.borderWidth = 1.5
         field.layer.borderColor = UIColor.secondaryLabel.cgColor
@@ -43,6 +49,36 @@ class LoginViewController: UIViewController {
         
         return field
         
+    }()
+    
+    private let passwordTextField: UITextField = {
+        
+        let field = UITextField()
+        
+        field.returnKeyType = .continue
+        
+        field.placeholder = "password...."
+        
+        // textField内のinnnerのpadding-leftを操作
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
+        
+        // タイプした最初の文字が大文字になるのを防ぐ
+        field.autocapitalizationType = .none
+        
+        // textの自動補完機能をオフにする
+        field.autocorrectionType = .no
+        
+        // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
+        field.layer.masksToBounds = true
+        
+        field.layer.cornerRadius = Constants.cornerRadius
+        field.layer.borderWidth = 1.5
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        
+        field.backgroundColor = .secondarySystemBackground
+        
+        return field
     }()
     
     
