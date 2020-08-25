@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         field.placeholder = "username or email...."
         // textField内のinnnerのpadding-leftを操作
         field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         
         // タイプした最初の文字が大文字になるのを防ぐ
         field.autocapitalizationType = .none
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         field.layer.masksToBounds = true
         
         field.layer.cornerRadius = Constants.cornerRadius
-        field.layer.borderWidth = 1.5
+        field.layer.borderWidth = 1.0
         field.layer.borderColor = UIColor.secondaryLabel.cgColor
         
         field.backgroundColor = .secondarySystemBackground
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         
         // textField内のinnnerのpadding-leftを操作
         field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
         
         // タイプした最初の文字が大文字になるのを防ぐ
         field.autocapitalizationType = .none
@@ -73,9 +73,10 @@ class LoginViewController: UIViewController {
         field.layer.masksToBounds = true
         
         field.layer.cornerRadius = Constants.cornerRadius
-        field.layer.borderWidth = 1.5
+        field.layer.borderWidth = 1.0
         field.layer.borderColor = UIColor.secondaryLabel.cgColor
         
+        field.isSecureTextEntry = true
         field.backgroundColor = .secondarySystemBackground
         
         return field
@@ -94,7 +95,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    // outletの位置指定
+    // partsの位置指定
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -105,6 +106,12 @@ class LoginViewController: UIViewController {
             height: 52
         )
         
+        passwordTextField.frame = CGRect(
+            x: 25,
+            y: 162,
+            width: view.frame.width - 50,
+            height: 52)
+        
         
     }
     
@@ -113,6 +120,7 @@ class LoginViewController: UIViewController {
     private func addSubViews() {
         
         view.addSubview(usernameEmailTextField)
+        view.addSubview(passwordTextField)
         
         
     }
