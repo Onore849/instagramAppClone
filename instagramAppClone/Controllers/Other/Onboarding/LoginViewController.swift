@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
         // staticはインスタンス()を使わなくても呼び出すことができる
         static let cornerRadius: CGFloat = 8.0
         
+        // textFieldに対する共通の設定
         static func textFieldSetting(placeholder: String, returnKeyType: UIReturnKeyType) -> UITextField {
             
             let field = UITextField()
@@ -63,7 +64,19 @@ class LoginViewController: UIViewController {
         
     }()
     
-    
+    // create headerView
+    private let headerView: UIView = {
+        
+        let header = UIView()
+        
+        header.clipsToBounds = true
+        let backgroundImageView = UIImageView(image: UIImage(named: "gradient"))
+        
+        // headerに背景画像を追加
+        header.addSubview(backgroundImageView)
+       
+        return header
+    }()
 
     // MARK:- display
     override func viewDidLoad() {
@@ -80,9 +93,18 @@ class LoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        headerView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: view.width,
+            height: view.height/3
+        )
+        
+        configureHeaderView()
+        
         usernameEmailTextField.frame = CGRect(
             x: 25,
-            y: 100,
+            y: headerView.bottom + 40,
             width: view.frame.width - 50,
             height: 52
         )
@@ -96,12 +118,42 @@ class LoginViewController: UIViewController {
         
     }
     
-    
     // MARK:- outletをviewに追加する
     private func addSubViews() {
         
+        view.addSubview(headerView)
+        
         view.addSubview(usernameEmailTextField)
         view.addSubview(passwordTextField)
+        
+        
+    }
+    
+    // MARK:- 各構成要素の細かい設定
+    private func configureHeaderView() {
+        
+        // headerView内に存在するsubViewsの数が1以外ならerror
+        guard headerView.subviews.count == 1 else {
+            
+            print(headerView.subviews.count)
+            return
+            
+        }
+        
+        // 追加したbackgroundImageViewを変数に入れている/ 入らなければエラー
+        guard let backgroundView = headerView.subviews.first else {
+         
+            return
+            
+        }
+        
+        // headerView.boundsとすることで、headerViewの大きさに合わせて背景が指定される
+        backgroundView.frame = headerView.bounds
+        
+        // logoの作成
+        
+        
+        
         
         
     }
