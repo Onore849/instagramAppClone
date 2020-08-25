@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>909063054365-07fki1i0ukatqge6iq7vgf1rtv5lamsd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.909063054365-07fki1i0ukatqge6iq7vgf1rtv5lamsd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA30Ol-zFaw_M8NBU2XoGFM5KnX-R-4xCc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>909063054365</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.zawawa.instagramAppClone</string>
+	<key>PROJECT_ID</key>
+	<string>stately-turbine-286205</string>
+	<key>STORAGE_BUCKET</key>
+	<string>stately-turbine-286205.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:909063054365:ios:1d7928d0e35e259aa3d2f4</string>
+	<key>DATABASE_URL</key>
+	<string>https://stately-turbine-286205.firebaseio.com</string>
+</dict>
+</plist>
