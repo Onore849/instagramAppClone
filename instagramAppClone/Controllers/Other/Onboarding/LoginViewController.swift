@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
             
         }
         
+        
+        
     }
     
  
@@ -76,6 +78,23 @@ class LoginViewController: UIViewController {
         header.addSubview(backgroundImageView)
        
         return header
+    }()
+    
+    // create Button
+    private let loginButton: UIButton = {
+        
+        let button = UIButton()
+        
+        button.setTitle("Log In", for: .normal)
+        
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constants.cornerRadius
+        
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        
+        return button
     }()
 
     // MARK:- display
@@ -115,6 +134,13 @@ class LoginViewController: UIViewController {
             width: view.frame.width - 50,
             height: 52)
         
+        loginButton.frame = CGRect(
+            x: 25,
+            y: passwordTextField.bottom + 10,
+            width: view.width - 50,
+            height: 52
+        )
+        
         
     }
     
@@ -125,6 +151,8 @@ class LoginViewController: UIViewController {
         
         view.addSubview(usernameEmailTextField)
         view.addSubview(passwordTextField)
+        
+        view.addSubview(loginButton)
         
         
     }
