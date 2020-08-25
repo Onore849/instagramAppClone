@@ -40,12 +40,28 @@ class LoginViewController: UIViewController {
              field.layer.borderColor = UIColor.secondaryLabel.cgColor
              
              field.backgroundColor = .secondarySystemBackground
+            
+            if returnKeyType == .continue {
+                
+                field.isSecureTextEntry = true
+                
+            }
              
              return field
             
         }
         
-        
+        // privacyButton & termsButtonの共通設定
+        static func CommonButtonSetting(title: String) -> UIButton {
+            
+            let button = UIButton()
+            
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(.secondaryLabel, for: .normal)
+            
+            return button
+            
+        }
         
     }
     
@@ -96,6 +112,24 @@ class LoginViewController: UIViewController {
         
         return button
     }()
+    
+    private let createAccountButton: UIButton = {
+            
+        Constants.CommonButtonSetting(title: "New User? Create an Account")
+
+    }()
+    
+    private let termsButton: UIButton = {
+        
+        Constants.CommonButtonSetting(title: "Terms of Serviced")
+        
+    }()
+    
+    private let privacyButton: UIButton = {
+        
+        Constants.CommonButtonSetting(title: "Privacy Policy")
+        
+    }()
 
     // MARK:- display
     override func viewDidLoad() {
@@ -141,6 +175,27 @@ class LoginViewController: UIViewController {
             height: 52
         )
         
+        createAccountButton.frame = CGRect(
+            x: 20,
+            y: loginButton.bottom + 10,
+            width: view.width - 40,
+            height: 50
+        )
+        
+        termsButton.frame = CGRect(
+            x: 20,
+            y: view.height - view.safeAreaInsets.bottom - 100,
+            width: view.width - 40,
+            height: 50
+        )
+        
+        privacyButton.frame = CGRect(
+            x: 20,
+            y: termsButton.bottom,
+            width: view.width - 40,
+            height: 50
+        )
+        
         
     }
     
@@ -153,6 +208,9 @@ class LoginViewController: UIViewController {
         view.addSubview(passwordTextField)
         
         view.addSubview(loginButton)
+        view.addSubview(createAccountButton)
+        view.addSubview(termsButton)
+        view.addSubview(privacyButton)
         
         
     }
