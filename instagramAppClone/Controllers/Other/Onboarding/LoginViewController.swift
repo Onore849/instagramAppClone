@@ -15,6 +15,35 @@ class LoginViewController: UIViewController {
         // staticはインスタンス()を使わなくても呼び出すことができる
         static let cornerRadius: CGFloat = 8.0
         
+        static func textFieldSetting(placeholder: String) -> UITextField {
+            
+            let field = UITextField()
+             field.returnKeyType = .next
+             
+             field.placeholder = placeholder
+             // textField内のinnnerのpadding-leftを操作
+             field.leftViewMode = .always
+             field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
+             
+             // タイプした最初の文字が大文字になるのを防ぐ
+             field.autocapitalizationType = .none
+             
+             // textの自動補完機能をオフにする
+             field.autocorrectionType = .no
+             
+             // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
+             field.layer.masksToBounds = true
+             
+             field.layer.cornerRadius = Constants.cornerRadius
+             field.layer.borderWidth = 1.0
+             field.layer.borderColor = UIColor.secondaryLabel.cgColor
+             
+             field.backgroundColor = .secondarySystemBackground
+             
+             return field
+            
+        }
+        
     }
     
  
@@ -24,62 +53,14 @@ class LoginViewController: UIViewController {
     // create textField
     private let usernameEmailTextField: UITextField = {
         
-        let field = UITextField()
-        field.returnKeyType = .next
-        
-        field.placeholder = "username or email...."
-        // textField内のinnnerのpadding-leftを操作
-        field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
-        
-        // タイプした最初の文字が大文字になるのを防ぐ
-        field.autocapitalizationType = .none
-        
-        // textの自動補完機能をオフにする
-        field.autocorrectionType = .no
-        
-        // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
-        field.layer.masksToBounds = true
-        
-        field.layer.cornerRadius = Constants.cornerRadius
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
-        
-        field.backgroundColor = .secondarySystemBackground
-        
-        return field
+        Constants.textFieldSetting(placeholder: "Username or Email....")
         
     }()
     
     private let passwordTextField: UITextField = {
         
-        let field = UITextField()
+        Constants.textFieldSetting(placeholder: "Password.....")
         
-        field.returnKeyType = .continue
-        
-        field.placeholder = "password...."
-        
-        // textField内のinnnerのpadding-leftを操作
-        field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
-        
-        // タイプした最初の文字が大文字になるのを防ぐ
-        field.autocapitalizationType = .none
-        
-        // textの自動補完機能をオフにする
-        field.autocorrectionType = .no
-        
-        // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
-        field.layer.masksToBounds = true
-        
-        field.layer.cornerRadius = Constants.cornerRadius
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
-        
-        field.isSecureTextEntry = true
-        field.backgroundColor = .secondarySystemBackground
-        
-        return field
     }()
     
     
