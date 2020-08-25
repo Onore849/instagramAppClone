@@ -151,10 +151,18 @@ class LoginViewController: UIViewController {
         backgroundView.frame = headerView.bounds
         
         // logoの作成
+        let imageLogo = UIImageView(image: UIImage(named: "logo3"))
+        headerView.addSubview(imageLogo)
         
+        imageLogo.contentMode = .scaleAspectFit
         
-        
-        
+        // logoの位置
+        imageLogo.frame = CGRect(
+            x: headerView.width/4,
+            y: view.safeAreaInsets.top,
+            width: headerView.width/2,
+            height: headerView.height - view.safeAreaInsets.top
+        )
         
     }
     
