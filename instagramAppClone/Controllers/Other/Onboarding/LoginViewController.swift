@@ -11,7 +11,6 @@ import UIKit
 class LoginViewController: UIViewController {
     
     struct Constants {
-        
         // staticはインスタンス()を使わなくても呼び出すことができる
         static let cornerRadius: CGFloat = 8.0
         
@@ -137,6 +136,8 @@ class LoginViewController: UIViewController {
         
         addSubViews()
         
+        tappedActions()
+        
         view.backgroundColor = .systemBackground
 
         
@@ -252,6 +253,44 @@ class LoginViewController: UIViewController {
         
     }
     
+    // MARK:- タップしたときの処理のまとめ
+    private func tappedActions() {
+        
+        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        
+        
+    }
+    
+    @objc private func didTapLoginButton() {
+        
+        passwordTextField.resignFirstResponder()
+        usernameEmailTextField.resignFirstResponder()
+        
+        
+        
+    }
+    
+}
 
-
+// MARK:- textFieldタップ時のキーボードの挙動
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == usernameEmailTextField {
+            
+            passwordTextField.becomeFirstResponder()
+            
+        }
+        else if textField == passwordTextField {
+            
+            didTapLoginButton()
+            
+        }
+        
+        return true
+        
+    }
+    
+    
 }
