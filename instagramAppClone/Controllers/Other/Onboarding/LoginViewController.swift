@@ -61,18 +61,9 @@ class LoginViewController: UIViewController {
     // create Button
     private let loginButton: UIButton = {
         
-        let button = UIButton()
+        buttonObject.objectButtonSetting(titleString: "Log In", titleColor: .white, backgroundColor: .systemGreen)
         
-        button.setTitle("Log In", for: .normal)
         
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = userTextField.layor.cornerRadius
-        
-        button.backgroundColor = .systemGreen
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
-        
-        return button
     }()
     
     private let createAccountButton: UIButton = {
