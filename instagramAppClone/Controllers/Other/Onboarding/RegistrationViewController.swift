@@ -42,6 +42,12 @@ class RegistrationViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
+        registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
+        
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         addSubViews()
         
     }
@@ -71,7 +77,49 @@ class RegistrationViewController: UIViewController {
     }
     
     // MARK:- tapped function
-
+    
+    @objc func didTapRegisterButton() {
+        
+        usernameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        
+        
+        
+    }
+    
+    
 }
 
 // MARK: - keybord behavior
+
+extension RegistrationViewController: UITextFieldDelegate {
+    
+    // return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == usernameTextField {
+            
+            // 自動的にemailTextFieldでキーボードが開く
+            emailTextField.becomeFirstResponder()
+            
+            
+        }
+        else if textField == emailTextField {
+            
+            passwordTextField.becomeFirstResponder()
+            
+        }
+        else {
+            
+            didTapRegisterButton()
+            
+        }
+        
+        
+        return true
+        
+    }
+    
+}
