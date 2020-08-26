@@ -14,10 +14,103 @@
             filePath = "instagramAppClone/Controllers/Other/Onboarding/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "configureHeaderView()"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "addSubViews()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46597436-D487-47D5-BC91-0842236F12BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagramAppClone/Resources/Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "46597436-D487-47D5-BC91-0842236F12BC - effd8de678c51070"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagramAppClone.userTextField.__deallocating_deinit"
+                  moduleName = "instagramAppClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nozawatakuonore/Documents/swift%20Learning/App/instagramAppClone/instagramAppClone/Resources/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "46597436-D487-47D5-BC91-0842236F12BC - 9818fbfad2d3a437"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagramAppClone.userTextField.__allocating_init(frame: __C.CGRect) -&gt; instagramAppClone.userTextField"
+                  moduleName = "instagramAppClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nozawatakuonore/Documents/swift%20Learning/App/instagramAppClone/instagramAppClone/Resources/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "46597436-D487-47D5-BC91-0842236F12BC - 9cb8bdc531fa8c2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagramAppClone.userTextField.init(frame: __C.CGRect) -&gt; instagramAppClone.userTextField"
+                  moduleName = "instagramAppClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nozawatakuonore/Documents/swift%20Learning/App/instagramAppClone/instagramAppClone/Resources/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "46597436-D487-47D5-BC91-0842236F12BC - 32ed0295335b28a4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagramAppClone.userTextField.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;instagramAppClone.userTextField&gt;"
+                  moduleName = "instagramAppClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nozawatakuonore/Documents/swift%20Learning/App/instagramAppClone/instagramAppClone/Resources/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "46597436-D487-47D5-BC91-0842236F12BC - e75570fe2169eb9b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagramAppClone.userTextField.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;instagramAppClone.userTextField&gt;"
+                  moduleName = "instagramAppClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nozawatakuonore/Documents/swift%20Learning/App/instagramAppClone/instagramAppClone/Resources/Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "239">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
