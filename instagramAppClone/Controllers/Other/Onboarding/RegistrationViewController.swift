@@ -28,7 +28,13 @@ class RegistrationViewController: UIViewController {
         userTextField.textFieldSetting(placeholder: "password", returnKeyType: .continue)
         
     }()
-
+    
+    // button
+    private let registerButton: UIButton = {
+        
+        buttonObject.objectButtonSetting(titleString: "New resigter", titleColor: .white, backgroundColor: .systemBlue)
+        
+    }()
     
     // MARK:- display
     override func viewDidLoad() {
@@ -47,6 +53,8 @@ class RegistrationViewController: UIViewController {
         emailTextField.frame = CGRect(x: 25, y: usernameTextField.bottom + 10, width: view.width - 50, height: 52)
         passwordTextField.frame = CGRect(x: 25, y: emailTextField.bottom + 10, width: view.width - 50, height: 52)
         
+        registerButton.frame = CGRect(x: 25, y: passwordTextField.bottom + 10, width: view.width - 50, height: 52)
+        
         
     }
     
@@ -57,6 +65,8 @@ class RegistrationViewController: UIViewController {
         view.addSubview(usernameTextField)
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
+        
+        view.addSubview(registerButton)
         
     }
     

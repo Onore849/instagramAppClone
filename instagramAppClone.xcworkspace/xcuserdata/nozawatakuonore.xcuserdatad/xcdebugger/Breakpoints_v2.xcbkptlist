@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "177"
             endingLineNumber = "177"
-            landmarkName = "addSubViews()"
+            landmarkName = "configureHeaderView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

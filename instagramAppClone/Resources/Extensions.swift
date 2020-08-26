@@ -48,15 +48,16 @@ extension UIView {
     
 }
 
+struct layor {
+    
+    static let cornerRadius: CGFloat = 8.0
+    
+}
+
 // commonly passWord & usernameEmail TextField
 class userTextField: UITextField {
     
-    struct layor {
-        
-        static let cornerRadius: CGFloat = 8.0
-        
-    }
-    // textFieldに対する共通の設定
+    // textFieldに対する共通の設定, staticは必須
     static func textFieldSetting(placeholder: String, returnKeyType: UIReturnKeyType) -> UITextField {
         
         let field = UITextField()
@@ -76,7 +77,7 @@ class userTextField: UITextField {
         // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
         field.layer.masksToBounds = true
         
-        field.layer.cornerRadius = userTextField.layor.cornerRadius
+        field.layer.cornerRadius = layor.cornerRadius
         field.layer.borderWidth = 1.0
         field.layer.borderColor = UIColor.secondaryLabel.cgColor
         
@@ -91,5 +92,28 @@ class userTextField: UITextField {
         return field
         
     }
+    
+}
+
+
+// commonly button
+class buttonObject: UIButton {
+    // staticは必須
+    static func objectButtonSetting(titleString: String, titleColor: UIColor, backgroundColor: UIColor) -> UIButton {
+        
+        let button = UIButton()
+        
+        button.setTitle(titleString, for: .normal)
+        
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = layor.cornerRadius
+        
+        button.backgroundColor = backgroundColor
+        button.setTitleColor(titleColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+
+        return button
+    }
+    
     
 }
