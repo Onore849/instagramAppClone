@@ -13,6 +13,11 @@ public class AuthManager {
     
     static let shared = AuthManager()
     
+    // create new user funcion
+    
+    
+    
+    // login function
     public func loginUser(username: String?, email: String?, passWord: String, completion: @escaping ((Bool) -> Void)) {
         
         // オプショナルバインディング: emailが存在するのなら
