@@ -257,16 +257,17 @@ class LoginViewController: UIViewController {
     private func tappedActions() {
         
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        createAccountButton.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
         
         
     }
     
+    // loginButtonを押したときの処理: ログインする
     @objc private func didTapLoginButton() {
         
         passwordTextField.resignFirstResponder()
         usernameEmailTextField.resignFirstResponder()
         
-        // ??
         guard let usernameEmail = usernameEmailTextField.text, !usernameEmail.isEmpty,
             let passWord = passwordTextField.text, !passWord.isEmpty else {
                 
@@ -288,26 +289,38 @@ class LoginViewController: UIViewController {
         
         AuthManager.shared.loginUser(username: username, email: email, passWord: passWord) { ( success ) in
             
-            if success {
-                // User logged In
-                self.dismiss(animated: true, completion: nil)
+            DispatchQueue.main.async {
                 
+                if success {
+                    // User logged In
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+                else {
+                    
+                    // alertの表示
+                    let alert = UIAlertController(title: "Log In Error", message: "we were unable to log you in", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    
+                    self.present(alert, animated: true)
+                    
+                }
             }
-            else {
-                
-                // alertの表示
-                let alert = UIAlertController(title: "Log In Error", message: "we were unable to log you in", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-                
-                self.present(alert, animated: true)
-                
-            }
-            
         }
         
         
     }
     
+    // createAccountButtonを押したときの処理: 新規登録ページヘの移行
+    @objc private func didTapCreateAccountButton() {
+        
+        let vc = RegistrationViewController()
+        
+        vc.title = "Create Account"
+        
+        present(UINavigationController(rootViewController: vc), animated: true)
+        
+    }
 }
 
 // MARK:- textFieldタップ時のキーボードの挙動
