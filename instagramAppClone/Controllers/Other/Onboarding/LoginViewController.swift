@@ -266,6 +266,40 @@ class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
         usernameEmailTextField.resignFirstResponder()
         
+        // ??
+        guard let usernameEmail = usernameEmailTextField.text, !usernameEmail.isEmpty,
+            let passWord = passwordTextField.text, !passWord.isEmpty else {
+                
+                return
+                
+        }
+        
+        // login function
+        var username: String?
+        var email: String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            // email
+            email = usernameEmail
+        } else {
+            // username
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, passWord: passWord) { ( success ) in
+            
+            if success {
+                // User logged In
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+            else {
+                
+                
+                
+            }
+            
+        }
         
         
     }
