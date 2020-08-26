@@ -14,8 +14,8 @@
             filePath = "instagramAppClone/Controllers/Other/Onboarding/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "configureHeaderView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "instagramAppClone/Resources/Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>

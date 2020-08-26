@@ -92,6 +92,9 @@ class LoginViewController: UIViewController {
         
         tappedActions()
         
+        usernameEmailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         view.backgroundColor = .systemBackground
 
         

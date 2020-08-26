@@ -48,6 +48,18 @@ extension UIView {
     
 }
 
+extension String {
+    
+    func safeDatabaseKey() -> String {
+        
+        return self.replacingOccurrences(of: ".", with: "-").replacingOccurrences(of: "@", with: "-")
+        
+    }
+    
+}
+
+
+
 struct layor {
     
     static let cornerRadius: CGFloat = 8.0

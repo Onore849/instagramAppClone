@@ -14,7 +14,67 @@ public class AuthManager {
     static let shared = AuthManager()
     
     // create new user funcion
-    
+    public func registerNewUser(username: String, email: String, password: String, completion: @escaping ((Bool) -> Void)) {
+        
+        /*
+         - check if username is available
+         - check if email is available
+         */
+        
+        DatabaseManager.shared.canCreateNewUser(with: email, username: username) { ( canCreate ) in
+            
+            if canCreate {
+                
+                /*
+                 - Create Account
+                 - Insert acount to dataase
+                 */
+                
+                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                    
+                    guard error != nil, result != nil else {
+                        
+                        completion(false)
+                        return
+                        
+                    }
+                    
+                    // Insert into database
+                    DatabaseManager.shared.insertNewUser(with: email, username: username) { (inserted) in
+                        
+                        if inserted {
+                            
+                            // Firebase auth could not create account
+                            completion(true)
+                            
+                            return
+                            
+                        }
+                        else {
+                            
+                            // Failed to insert to database
+                            completion(false)
+                            
+                            return
+                            
+                        }
+                    }
+                    
+                }
+                
+                
+            }
+            else {
+                
+                // either username or email does not exist
+                completion(false)
+                
+            }
+            
+        }
+        
+        
+    }
     
     
     // login function

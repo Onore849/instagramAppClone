@@ -84,10 +84,39 @@ class RegistrationViewController: UIViewController {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         
+        // optional chaining
+        guard let email = emailTextField.text, !email.isEmpty,
+            let username = usernameTextField.text, !username.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else {
+                
+                return
+                
+        }
+        
+        AuthManager.shared.registerNewUser(username: username, email: email, password: password) { (register) in
+            
+            DispatchQueue.main.async {
+                
+                if register {
+                    
+                    // good to go
+                    
+                } else {
+                    
+                    // failed
+                    
+                }
+            }
+            
+            
+        }
+        
         
         
         
     }
+    
+    
     
     
 }
