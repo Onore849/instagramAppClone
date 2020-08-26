@@ -12,44 +12,6 @@ import SafariServices
 class LoginViewController: UIViewController {
     
     struct Constants {
-        // staticはインスタンス()を使わなくても呼び出すことができる
-        static let cornerRadius: CGFloat = 8.0
-        
-        // textFieldに対する共通の設定
-        static func textFieldSetting(placeholder: String, returnKeyType: UIReturnKeyType) -> UITextField {
-            
-            let field = UITextField()
-             field.returnKeyType = returnKeyType
-             
-             field.placeholder = placeholder
-             // textField内のinnnerのpadding-leftを操作
-             field.leftViewMode = .always
-             field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
-             
-             // タイプした最初の文字が大文字になるのを防ぐ
-             field.autocapitalizationType = .none
-             
-             // textの自動補完機能をオフにする
-             field.autocorrectionType = .no
-             
-             // UITextFieldがUIViewよりも大きくなった時に文字が反映されない
-             field.layer.masksToBounds = true
-             
-             field.layer.cornerRadius = Constants.cornerRadius
-             field.layer.borderWidth = 1.0
-             field.layer.borderColor = UIColor.secondaryLabel.cgColor
-             
-             field.backgroundColor = .secondarySystemBackground
-            
-            if returnKeyType == .continue {
-                
-                field.isSecureTextEntry = true
-                
-            }
-             
-             return field
-            
-        }
         
         // privacyButton & termsButtonの共通設定
         static func CommonButtonSetting(title: String) -> UIButton {
@@ -72,13 +34,13 @@ class LoginViewController: UIViewController {
     // create textField
     private let usernameEmailTextField: UITextField = {
         
-        Constants.textFieldSetting(placeholder: "Username or Email....", returnKeyType: .next)
+        userTextField.textFieldSetting(placeholder: "Username or Email" , returnKeyType: .next)
         
     }()
     
     private let passwordTextField: UITextField = {
         
-        Constants.textFieldSetting(placeholder: "Password.....", returnKeyType: .continue)
+        userTextField.textFieldSetting(placeholder: "password", returnKeyType: .continue)
         
     }()
     
@@ -104,7 +66,7 @@ class LoginViewController: UIViewController {
         button.setTitle("Log In", for: .normal)
         
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = Constants.cornerRadius
+        button.layer.cornerRadius = userTextField.layor.cornerRadius
         
         button.backgroundColor = .systemGreen
         button.setTitleColor(.white, for: .normal)
