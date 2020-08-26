@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginViewController: UIViewController {
     
@@ -259,10 +260,13 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         createAccountButton.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
         
+        termsButton.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        privacyButton.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
+        
         
     }
     
-    // loginButtonを押したときの処理: ログインする
+    // tapped loginButton : ログインする
     @objc private func didTapLoginButton() {
         
         passwordTextField.resignFirstResponder()
@@ -311,7 +315,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    // createAccountButtonを押したときの処理: 新規登録ページヘの移行
+    // tapped createAccountButton: 新規登録ページヘの移行
     @objc private func didTapCreateAccountButton() {
         
         let vc = RegistrationViewController()
@@ -321,6 +325,39 @@ class LoginViewController: UIViewController {
         present(UINavigationController(rootViewController: vc), animated: true)
         
     }
+    
+    // tapped termsButton : search terms br safari
+    @objc func didTapTermsButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/581066165581870") else {
+            
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        
+        present(vc, animated: true)
+        
+        
+    }
+    
+    // tapped privacyButton : search privacy Policy by safari
+    @objc func didTapPrivacyButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/196883487377501/?hel-") else {
+            
+            return
+            
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        
+        present(vc, animated: true)
+        
+        
+    }
+    
+    
 }
 
 // MARK:- textFieldタップ時のキーボードの挙動
