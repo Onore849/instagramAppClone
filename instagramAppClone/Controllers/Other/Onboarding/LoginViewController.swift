@@ -295,7 +295,11 @@ class LoginViewController: UIViewController {
             }
             else {
                 
+                // alertの表示
+                let alert = UIAlertController(title: "Log In Error", message: "we were unable to log you in", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
                 
+                self.present(alert, animated: true)
                 
             }
             
