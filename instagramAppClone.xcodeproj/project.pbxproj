@@ -30,6 +30,7 @@
 		F8C24DE224F4D6C800F2B63A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */; };
 		F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */; };
 		F8C24DE624F50C4200F2B63A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE524F50C4200F2B63A /* Extensions.swift */; };
+		F8C24DEA24F5DBD900F2B63A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE924F5DBD900F2B63A /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8C24DE324F4DB2300F2B63A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F8C24DE524F50C4200F2B63A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F8C24DE924F5DBD900F2B63A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				F8C24DAA24F4C39500F2B63A /* SceneDelegate.swift */,
 				F8C24DE124F4D6C800F2B63A /* GoogleService-Info.plist */,
 				F8C24DE524F50C4200F2B63A /* Extensions.swift */,
+				F8C24DE924F5DBD900F2B63A /* AuthManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				F8C24DD424F4D44C00F2B63A /* PublishPostViewController.swift in Sources */,
 				F8C24DAB24F4C39500F2B63A /* SceneDelegate.swift in Sources */,
 				F8C24DDC24F4D49000F2B63A /* CameraViewController.swift in Sources */,
+				F8C24DEA24F5DBD900F2B63A /* AuthManager.swift in Sources */,
 				F8C24DCA24F4D3FD00F2B63A /* SettingsViewController.swift in Sources */,
 				F8C24DDA24F4D48600F2B63A /* ExploreViewController.swift in Sources */,
 				F8C24DCC24F4D40B00F2B63A /* ListViewController.swift in Sources */,
