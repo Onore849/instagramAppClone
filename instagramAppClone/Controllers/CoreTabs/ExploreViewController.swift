@@ -31,7 +31,6 @@ class ExploreViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.titleView = searchBar
         
-        
         // layoutの設定をviewDidLoad内に入れたいので、ここにcollectionViewについて書き込む
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
