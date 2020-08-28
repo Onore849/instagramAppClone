@@ -32,6 +32,11 @@
 		F8C24DE624F50C4200F2B63A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE524F50C4200F2B63A /* Extensions.swift */; };
 		F8C24DEA24F5DBD900F2B63A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DE924F5DBD900F2B63A /* AuthManager.swift */; };
 		F8C24DEC24F63EE900F2B63A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24DEB24F63EE900F2B63A /* DatabaseManager.swift */; };
+		F8C24E4A24F94A4500F2B63A /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24E4924F94A4500F2B63A /* IGFeedPostTableViewCell.swift */; };
+		F8C24E4C24F94AD400F2B63A /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24E4B24F94AD400F2B63A /* IGFeedPostHeaderTableViewCell.swift */; };
+		F8C24E4F24F94AF200F2B63A /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24E4E24F94AF200F2B63A /* IGFeedPostActionsTableViewCell.swift */; };
+		F8C24E5124F94B0A00F2B63A /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24E5024F94B0A00F2B63A /* IGFeedPostGeneralTableViewCell.swift */; };
+		F8C24E5324F94B3400F2B63A /* StrageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24E5224F94B3400F2B63A /* StrageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		F8C24DE524F50C4200F2B63A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F8C24DE924F5DBD900F2B63A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		F8C24DEB24F63EE900F2B63A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		F8C24E4924F94A4500F2B63A /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		F8C24E4B24F94AD400F2B63A /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F8C24E4E24F94AF200F2B63A /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
+		F8C24E5024F94B0A00F2B63A /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		F8C24E5224F94B3400F2B63A /* StrageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,7 @@
 				F8C24DE524F50C4200F2B63A /* Extensions.swift */,
 				F8C24DE924F5DBD900F2B63A /* AuthManager.swift */,
 				F8C24DEB24F63EE900F2B63A /* DatabaseManager.swift */,
+				F8C24E5224F94B3400F2B63A /* StrageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 		F8C24DBE24F4D32F00F2B63A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8C24E4724F949EA00F2B63A /* Cells */,
 				F8C24DBF24F4D34700F2B63A /* storyboards */,
 				F8C24DB124F4C39800F2B63A /* Assets.xcassets */,
 			);
@@ -215,6 +227,33 @@
 				F8C24DD324F4D44C00F2B63A /* PublishPostViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		F8C24E4724F949EA00F2B63A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8C24E4824F949FE00F2B63A /* Home Feed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F8C24E4824F949FE00F2B63A /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F8C24E4D24F94AD700F2B63A /* New Group */,
+				F8C24E4924F94A4500F2B63A /* IGFeedPostTableViewCell.swift */,
+				F8C24E4B24F94AD400F2B63A /* IGFeedPostHeaderTableViewCell.swift */,
+				F8C24E4E24F94AF200F2B63A /* IGFeedPostActionsTableViewCell.swift */,
+				F8C24E5024F94B0A00F2B63A /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = "Home Feed";
+			sourceTree = "<group>";
+		};
+		F8C24E4D24F94AD700F2B63A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C24E4C24F94AD400F2B63A /* IGFeedPostHeaderTableViewCell.swift in Sources */,
+				F8C24E4F24F94AF200F2B63A /* IGFeedPostActionsTableViewCell.swift in Sources */,
+				F8C24E5124F94B0A00F2B63A /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				F8C24DD624F4D45600F2B63A /* LoginViewController.swift in Sources */,
 				F8C24DE624F50C4200F2B63A /* Extensions.swift in Sources */,
 				F8C24DC624F4D3E100F2B63A /* PostViewController.swift in Sources */,
@@ -348,6 +390,8 @@
 				F8C24DEC24F63EE900F2B63A /* DatabaseManager.swift in Sources */,
 				F8C24DAB24F4C39500F2B63A /* SceneDelegate.swift in Sources */,
 				F8C24DDC24F4D49000F2B63A /* CameraViewController.swift in Sources */,
+				F8C24E4A24F94A4500F2B63A /* IGFeedPostTableViewCell.swift in Sources */,
+				F8C24E5324F94B3400F2B63A /* StrageManager.swift in Sources */,
 				F8C24DEA24F5DBD900F2B63A /* AuthManager.swift in Sources */,
 				F8C24DCA24F4D3FD00F2B63A /* SettingsViewController.swift in Sources */,
 				F8C24DDA24F4D48600F2B63A /* ExploreViewController.swift in Sources */,
