@@ -41,6 +41,7 @@
 		F8C24EC124FC5C5100F2B63A /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24EC024FC5C5100F2B63A /* ProfileTabsCollectionReusableView.swift */; };
 		F8C24EC324FC5CA600F2B63A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24EC224FC5CA600F2B63A /* PhotoCollectionViewCell.swift */; };
 		F8C24EC724FC5CF200F2B63A /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C24EC624FC5CF200F2B63A /* FormTableViewCell.swift */; };
+		F8EC302C24FE2A6D00D2A164 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EC302B24FE2A6D00D2A164 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		F8C24EC024FC5C5100F2B63A /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
 		F8C24EC224FC5CA600F2B63A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8C24EC624FC5CF200F2B63A /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		F8EC302B24FE2A6D00D2A164 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		F8C24DBD24F4D32000F2B63A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8EC302B24FE2A6D00D2A164 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				F8C24DD224F4D43900F2B63A /* PostEditorViewController.swift in Sources */,
 				F8C24DE424F4DB2300F2B63A /* HomeViewController.swift in Sources */,
 				F8C24DD024F4D42C00F2B63A /* SearchResultViewController.swift in Sources */,
+				F8EC302C24FE2A6D00D2A164 /* Models.swift in Sources */,
 				F8C24DD824F4D46600F2B63A /* RegistrationViewController.swift in Sources */,
 				F8C24DCE24F4D41800F2B63A /* SearchViewController.swift in Sources */,
 				F8C24DE024F4D4A800F2B63A /* ProfileViewController.swift in Sources */,

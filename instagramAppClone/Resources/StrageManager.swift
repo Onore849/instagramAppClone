@@ -20,47 +20,7 @@ public class StorageManager {
         
     }
     
-    // 予想: 型を定義できる??
-    public enum UserPostType {
-        
-        case photo, video
-        
-    }
-    
-    /// Represent user post
-    public struct UserPost {
-        
-        let postType: UserPostType
-        let thumbnailImgege: URL
-        let caption: String?
-        let likeCount: [PostLikes]
-        let comments: [PostComment]
-        let createdDate: Date
-        
-    }
-    
-    struct PostLikes {
-        
-        let username: String
-        let postIdentifier: String
-        
-    }
-    
-    struct PostComment {
-        
-        let identifier: String
-        let username: String
-        let text: String
-        let createDate: Date
-        let likes: [CommentLikes]
-        
-    }
-    
-    struct CommentLikes {
-        
-        let username: String
-        let commentIdentifier: String
-    }
+
     
     //MARK:- public
     
