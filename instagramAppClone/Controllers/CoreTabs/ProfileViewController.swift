@@ -25,8 +25,14 @@ final class ProfileViewController: UIViewController {
         // collectionViewの設定
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: view.width/3, height: view.width/3)
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
+        let size = (view.width - 4)/3
+        layout.itemSize = CGSize(width: size, height: size)
+        
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 1
+        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         collectionView?.delegate = self
@@ -66,6 +72,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        
         
         return UICollectionViewCell()
         
