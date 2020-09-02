@@ -14,6 +14,8 @@ final class ProfileViewController: UIViewController {
     // collection Viewの設定
     private var collectionView: UICollectionView?
     
+    private var userPosts = [UserPost]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,12 +84,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         // それ移行にcollectionViewを設定する
         return 30
+        
+        // return userPosts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
+        // let model = userPosts[indexPath.row]
         
+        // cell.configure(with: model)
         
         return UICollectionViewCell()
         
@@ -96,6 +102,14 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        // get the model and open post controller
+        // let model = userPost[indexPath.row]
+        
+        let vc = PostViewController()
+        vc.title = "Post"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
         
     }
     
